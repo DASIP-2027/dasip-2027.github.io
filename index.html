@@ -52,7 +52,6 @@ tpc: [
 	{name: 'Tiago Rocha', affiliation: 'INESC-ID Universidade de Lisboa, Portugal'},
 	{name: 'Nuno Roma', affiliation: 'Universidade de Lisboa, Portugal'},
 	{name: 'Olivier Romain', affiliation: 'University of Cergy Pontoise, France'},
-	{name: 'Claudio Rubattu', affiliation: 'University of Sassari, Italy'},
 	{name: 'Ruben Salvador', affiliation: 'CentraleSupélec - IETR, France'},
 	{name: 'Hubert Szolc', affiliation: 'AGH University of Kraków, Poland'},
 	{name: 'Mateusz Wąsala', affiliation: 'AGH University of Kraków, Poland'},
@@ -254,17 +253,19 @@ sc: [
                     <div class="col-lg-12 portfolio-item text-center">
                     </div>
 					<p>Preliminary Cycle<br>
-                        <tag class="text-muted">
-						Abstract submission deadline: {% unless page.schedule.preliminary.extended.abstract == empty %}<del>{{ page.schedule.preliminary.initial.abstract }}</del> &rarr; <b>{{ page.schedule.preliminary.extended.abstract }}</b>{% else %}{{ page.schedule.preliminary.initial.abstract }}{% endunless %}<br>
-                        Paper submission deadline: {% unless page.schedule.preliminary.extended.submission == empty %}<del>{{ page.schedule.preliminary.initial.submission }}</del> &rarr; <b>{{ page.schedule.preliminary.extended.submission }}</b>{% else %}{{ page.schedule.preliminary.initial.submission }}{% endunless %}<br>
-                        Notification and feedbacks: {% unless page.schedule.preliminary.extended.notification == empty %}<del>{{ page.schedule.preliminary.initial.notification }}</del> &rarr; <b>{{ page.schedule.preliminary.extended.notification }}</b>{% else %}{{ page.schedule.preliminary.initial.notification }}{% endunless %}</tag>
+                        <span class="text-muted">
+							Abstract submission deadline: {{ page.schedule.preliminary.initial.abstract }}<br>
+		                    Paper submission deadline: {{ page.schedule.preliminary.initial.submission }}<br>
+		                    Notification and feedbacks: {{ page.schedule.preliminary.initial.notification }}
+                        </span>
                     </p>
                     <p>Main Cycle<br>
-                        <tag class="text-muted">
-						Abstract submission deadline: {% unless page.schedule.main.extended.abstract == empty %}<del>{{ page.schedule.main.initial.abstract }}</del> &rarr; <b>{{ page.schedule.main.extended.abstract }}</b>{% else %}{{ page.schedule.main.initial.abstract }}{% endunless %}<br>
-                        Paper submission deadline: {% unless page.schedule.main.extended.submission == empty %}<del>{{ page.schedule.main.initial.submission }}</del> &rarr; <b>{{ page.schedule.main.extended.submission }}</b>{% else %}{{ page.schedule.main.initial.submission }}{% endunless %}<br>
-                        Notification: {% unless page.schedule.main.extended.notification == empty %}<del>{{ page.schedule.main.initial.notification }}</del> &rarr; <b>{{ page.schedule.main.extended.notification }}</b>{% else %}{{ page.schedule.main.initial.notification }}{% endunless %}<br>
-						Camera-ready submission deadline: {% unless page.schedule.main.extended.camera == empty %}<del>{{ page.schedule.main.initial.camera }}</del> &rarr; <b>{{ page.schedule.main.extended.camera }}</b>{% else %}{{ page.schedule.main.initial.camera }}{% endunless %}</tag>
+                        <span class="text-muted">
+							Abstract submission deadline: {{ page.schedule.main.initial.abstract }}<br>
+		                    Paper submission deadline: {{ page.schedule.main.initial.submission }}<br>
+		                    Notification: {{ page.schedule.main.initial.notification }}<br>
+							Camera-ready submission deadline: {{ page.schedule.main.initial.camera }}
+						</span>
                     </p>
                     <p><i>All deadlines are for 23:59 Anywhere on Earth (AoE)</i></p>
                 </div>
@@ -420,9 +421,7 @@ sc: [
                         <i class="fa fa-file-upload fa-stack-1x fa-inverse"></i>
                     </span>
                     <h4 class="service-heading">Paper Submission</h4>
-                    <p class="text-muted">The submission of papers is done via HotCRP. Please submit your paper
-                        through the following link:<br><a href="https://dasip27-hotcrp.univ-ubs.fr/" target="_blank"
-                            rel="noopener">https://dasip27-hotcrp.univ-ubs.fr/</a>.</p>
+                    <p class="text-muted">TO BE DEFINED.</p>
 
                     <span class="fa-stack fa-3x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
