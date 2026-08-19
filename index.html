@@ -5,7 +5,8 @@ hipeac: {dates: '18-20 January', location: 'Glasgow, Scotland', url: 'https://ww
 edition-no: '20th'
 schedule: {
 	preliminary: { 
-		initial: {abstract: '18 August 2026', submission: '25 August 2026', notification: '6 October 2026'}
+		initial: {abstract: '18 August 2026', submission: '25 August 2026', notification: '6 October 2026'},
+		extended: {abstract: '26 August 2026', submission: '2 September 2026', notification: '13 October 2026'}
 	},
 	main: {
 		initial: {abstract: '20 October 2026', submission: '27 October 2026', notification: '14 December 2026', camera: '9 January 2027'}
@@ -234,9 +235,9 @@ sc: [
                     </div>
 					<p>Preliminary Cycle<br>
                         <span class="text-muted">
-							Abstract submission deadline: {{ page.schedule.preliminary.initial.abstract }}<br>
-		                    Paper submission deadline: {{ page.schedule.preliminary.initial.submission }}<br>
-		                    Notification and feedbacks: {{ page.schedule.preliminary.initial.notification }}
+							Abstract submission deadline: {% unless page.schedule.preliminary.extended.abstract == empty %}<del>{{ page.schedule.preliminary.initial.abstract }}</del> &rarr; <b>{{ page.schedule.preliminary.extended.abstract }}</b>{% else %}{{ page.schedule.preliminary.initial.abstract }}{% endunless %}<br>
+                        	Paper submission deadline: {% unless page.schedule.preliminary.extended.submission == empty %}<del>{{ page.schedule.preliminary.initial.submission }}</del> &rarr; <b>{{ page.schedule.preliminary.extended.submission }}</b>{% else %}{{ page.schedule.preliminary.initial.submission }}{% endunless %}<br>
+                        	Notification and feedbacks: {% unless page.schedule.preliminary.extended.notification == empty %}<del>{{ page.schedule.preliminary.initial.notification }}</del> &rarr; <b>{{ page.schedule.preliminary.extended.notification }}</b>{% else %}{{ page.schedule.preliminary.initial.notification }}{% endunless %}</tag>
                         </span>
                     </p>
                     <p>Main Cycle<br>
@@ -247,7 +248,7 @@ sc: [
 							Camera-ready submission deadline: {{ page.schedule.main.initial.camera }}
 						</span>
                     </p>
-                    <p><i>All deadlines are for 11:59 PM, Greenwich Mean Time (GMT)</i></p>
+                    <p><i>All deadlines are at 11:59 PM (AOE, UTC−12:00)</i></p>
                 </div>
             </div>
         </div>
