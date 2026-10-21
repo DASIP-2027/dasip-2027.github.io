@@ -9,7 +9,8 @@ schedule: {
 		extended: {abstract: '26 August 2026', submission: '10 September 2026', notification: '13 October 2026'}
 	},
 	main: {
-		initial: {abstract: '20 October 2026', submission: '27 October 2026', notification: '14 December 2026', camera: '9 January 2027'}
+		initial: {abstract: '20 October 2026', submission: '27 October 2026', notification: '14 December 2026', camera: '9 January 2027'},
+		extended: {abstract: '27 October 2026', submission: '3 November 2026', notification: '14 December 2026', camera: '9 January 2027'}
 	}
 }
 chairs: [
@@ -248,8 +249,8 @@ sc: [
                     </p>
                     <p>Main Cycle<br>
                         <span class="text-muted">
-							Abstract submission deadline: {{ page.schedule.main.initial.abstract }}<br>
-		                    Paper submission deadline: {{ page.schedule.main.initial.submission }}<br>
+							Abstract submission deadline: {% unless page.schedule.main.extended.abstract == empty %}<del>{{ page.schedule.main.initial.abstract }}</del> &rarr; <b>{{ page.schedule.main.extended.abstract }}</b>{% else %}{{ page.schedule.main.initial.abstract }}{% endunless %}<br>
+                        	Paper submission deadline: {% unless page.schedule.main.extended.submission == empty %}<del>{{ page.schedule.main.initial.submission }}</del> &rarr; <b>{{ page.schedule.main.extended.submission }}</b>{% else %}{{ page.schedule.main.initial.submission }}{% endunless %}<br>
 		                    Notification: {{ page.schedule.main.initial.notification }}<br>
 							Camera-ready submission deadline: {{ page.schedule.main.initial.camera }}
 						</span>
